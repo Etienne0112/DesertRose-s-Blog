@@ -22,6 +22,6 @@ const posts = [
 
     // CS
     { id: 13001, category: 'CS', date: '2026-05-07', title: '테스트1',
-        summary: '롤체 하고싶다', fileName: 'sex.md' },
+        summary: '롤체 하고싶다', fileName: 'test12345.md' },
 
 ];

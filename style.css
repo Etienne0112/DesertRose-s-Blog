@@ -1,4 +1,9 @@
-﻿:root {
+﻿/* --- 마크다운 본문 내 문단 및 요소 여백 --- */
+.markdown-body p {
+    margin-bottom: 24px;
+}
+
+:root {
     --bg-main: #0f0f0f;
     --bg-card: #1a1a1a;
     --text-main: #efefef;
@@ -42,7 +47,7 @@ a { text-decoration: none; color: inherit; }
 .theme-info { text-align: center; margin-bottom: 25px; }
 .theme-info h2 { font-size: 1.6rem; color: var(--text-main); letter-spacing: 1px; }
 
-/* 카드 하단 최근 글 정보 (단순 텍스트화) */
+/* 카드 하단 최근 글 정보 */
 .recent-list { list-style: none; border-top: 1px solid var(--border); padding-top: 20px; }
 .recent-list li {
     font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px;

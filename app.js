@@ -1,5 +1,7 @@
 ﻿const app = document.getElementById('app');
 
+const getSortedPosts = () => [...posts].sort((a, b) => b.id - a.id);
+
 function router() {
     const hash = location.hash.replace('#', '') || 'home';
 
@@ -17,12 +19,11 @@ function router() {
 // 홈 화면 렌더링
 function renderHome() {
     let html = `<h1>학습 기록장</h1><div class="theme-grid">`;
+    const sortedPosts = getSortedPosts();
 
     Object.keys(categoryMap).forEach(key => {
         const cat = categoryMap[key];
-        const recent3 = posts.filter(p => p.category === key).slice(0, 3);
-
-        // 카드 전체에 onClick 이벤트 적용. 내부 리스트(li) 클릭 시에도 카테고리로 이동함.
+        const recent3 = sortedPosts.filter(p => p.category === key).slice(0, 3);
         html += `
             <div class="theme-card" onclick="location.hash='category/${key}'">
                 <div class="theme-info">
@@ -43,7 +44,7 @@ function renderHome() {
 // 카테고리 목록 렌더링
 function renderCategory(key) {
     const cat = categoryMap[key];
-    const filtered = posts.filter(p => p.category === key);
+    const filtered = getSortedPosts().filter(p => p.category === key);
 
     let html = `<h2 class="page-title">${cat.name}</h2><div class="vertical-list">`;
     html += filtered.map(p => `

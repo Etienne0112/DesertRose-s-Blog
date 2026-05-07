@@ -75,3 +75,13 @@ a { text-decoration: none; color: inherit; }
 .markdown-body h2 { margin: 30px 0 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
 .markdown-body pre { background: #282c34; padding: 15px; border-radius: 10px; overflow-x: auto; margin: 20px 0; border: 1px solid #000; }
 .markdown-body code { font-family: 'Fira Code', monospace; font-size: 0.9rem; }
+
+/* --- 마크다운 본문 내 이미지 스타일 --- */
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}

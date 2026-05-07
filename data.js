@@ -21,7 +21,7 @@ const posts = [
         summary: '간단한 입출력, 변수와 함수', fileName: 'CPPBasic1.md' },
 
     // CS
-    { id: 13001, category: 'CS', date: '2026-05-07', title: '하 시발 섹스 하고싶다',
-        summary: '롤체 하고싶노', fileName: 'sex.md' },
+    { id: 13001, category: 'CS', date: '2026-05-07', title: '테스트1',
+        summary: '롤체 하고싶다', fileName: 'sex.md' },
 
 ];

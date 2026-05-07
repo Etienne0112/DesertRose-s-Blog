@@ -68,7 +68,7 @@ function renderPost(id) {
         .then(res => res.text())
         .then(md => {
             app.innerHTML = `
-                <article class="markdown-body">${marked.parse(md)}</article>
+                <article class="markdown-body">${marked.marked(md)}</article>
                 <hr style="border:0; border-top:1px solid var(--border); margin:40px 0;">
                 <a href="#category/${post.category}" style="color:var(--accent);">← 목록으로 돌아가기</a>
             `;

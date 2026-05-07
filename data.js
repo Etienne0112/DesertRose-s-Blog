@@ -18,7 +18,7 @@ const categoryMap = {
 const posts = [
     // CPP
     { id: 10001, category: 'CPP', date: '2026-05-07', title: 'CPP 기초부터 마스터 까지 1화',
-        summary: '', fileName: 'CPPBasic1.md' },
+        summary: '간단한 입출력, 변수와 함수', fileName: 'CPPBasic1.md' },
 
     // CS
     { id: 13001, category: 'CS', date: '2026-05-07', title: '하 시발 섹스 하고싶다',

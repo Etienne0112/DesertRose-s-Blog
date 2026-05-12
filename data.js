@@ -27,7 +27,10 @@ const posts = [
         summary: '함수란 무엇인가? 1화', fileName: 'CPPBasic3.md' },
 
     { id: 10004, category: 'CPP', date: '2026-05-10', title: 'CPP 기초부터 마스터 까지 4화',
-        summary: '함수란 무엇인가? 2화', fileName: 'CPPBasic4.md' }
+        summary: '함수란 무엇인가? 2화', fileName: 'CPPBasic4.md' },
+
+    { id: 10005, category: 'CPP', date: '2026-05-12', title: 'CPP 기초부터 마스터 까지 5화',
+        summary: '변수는 어떻게 사용하는가?', fileName: 'CPPBasic5.md' }
     //ASM
     //CS
     //UE

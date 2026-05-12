@@ -32,9 +32,9 @@ const posts = [
     { id: 10005, category: 'CPP', date: '2026-05-12', title: 'CPP 기초부터 마스터 까지 5화',
         summary: '변수는 어떻게 사용하는가?', fileName: 'CPPBasic5.md' },
     //ASM
+    { id: 20001, category: 'ASM', date: '2026-05-12', title: '컴파일러의 For문 최적화',
+        summary: '어떠한 조건에서 컴파일러는 For문을 최적화 하는가?', fileName: 'ASMForOpt.md' }
     //CS
-    { id: 30001, category: 'CS', date: '2026-05-12', title: '컴파일러의 For문 최적화',
-        summary: '어떠한 조건에서 컴파일러는 For문을 최적화 하는가?', fileName: 'CSForOpt.md' }
     //UE
     //DX11
     //DX12

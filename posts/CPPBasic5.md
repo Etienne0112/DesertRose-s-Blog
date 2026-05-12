@@ -117,7 +117,7 @@ std::ptrdiff_t diff = &arr[5] - &arr[0]; // 포인터 간의 거리 계산 (5)
 ```
 
 
-CV-한정자 (CV-Qualifiers)  
+**4. CV-한정자 (CV-Qualifiers)**  
 C++의 타입 시스템에서는 위의 모든 자료형에 한정자가 붙으면 컴파일러 관점에서 완전히 다른 타입으로 취급되고 오버로딩 된다. (예: int와 const int는 다른 타입이다)
 
 

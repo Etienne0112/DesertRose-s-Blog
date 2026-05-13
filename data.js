@@ -30,11 +30,13 @@ const posts = [
         summary: '함수란 무엇인가? 2화', fileName: 'CPPBasic4.md' },
 
     { id: 10005, category: 'CPP', date: '2026-05-12', title: 'CPP 기초부터 마스터 까지 5화',
-        summary: '변수는 어떻게 사용하는가?', fileName: 'CPPBasic5.md' },
+        summary: '변수는 어떤 자료형들이 있는가?', fileName: 'CPPBasic5.md' },
     //ASM
     { id: 20001, category: 'ASM', date: '2026-05-12', title: '컴파일러의 For문 최적화',
-        summary: '어떠한 조건에서 컴파일러는 For문을 최적화 하는가?', fileName: 'ASMForOpt.md' }
+        summary: '어떠한 조건에서 컴파일러는 For문을 최적화 하는가?', fileName: 'ASMForOpt.md' },
     //CS
+    { id: 30001, category: 'CS', date: '2026-05-13', title: '메모리 정렬이란?',
+        summary: '왜 같은 구조체인데 메모리 크기가 다를까?', fileName: 'CSStructSize.md' }
     //UE
     //DX11
     //DX12

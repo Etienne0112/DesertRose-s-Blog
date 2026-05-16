@@ -1,7 +1,5 @@
-﻿/* --- 마크다운 본문 내 문단 및 요소 여백 --- */
-.markdown-body p {
-    margin-bottom: 24px;
-}
+﻿/* --- 기본 설정 --- */
+.markdown-body p { margin-bottom: 24px; }
 
 :root {
     --bg-main: #0f0f0f;
@@ -19,70 +17,91 @@ body {
     color: var(--text-main);
     line-height: 1.7;
 }
-
 a { text-decoration: none; color: inherit; }
 .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-/* 네비바 */
+/* --- 애니메이션 --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+
+/* --- 네비바 & 검색창 --- */
 .navbar { padding: 20px 0; border-bottom: 1px solid var(--border); background: #000; position: sticky; top: 0; z-index: 100; }
 .nav-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
 .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
 .logo span { color: var(--accent); }
+
+.search-box input {
+    background: var(--bg-card); border: 1px solid var(--border); color: var(--text-main);
+    padding: 8px 15px; border-radius: 20px; outline: none; transition: 0.3s;
+}
+.search-box input:focus { border-color: var(--accent); width: 200px; }
 
 /* --- [홈] 테마 카드 그리드 --- */
 .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
 .theme-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 30px;
-    transition: 0.3s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 15px;
+    padding: 30px; transition: 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;
 }
 .theme-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-
-/* 텍스트만 남은 카드 상단 정보 */
 .theme-info { text-align: center; margin-bottom: 25px; }
 .theme-info h2 { font-size: 1.6rem; color: var(--text-main); letter-spacing: 1px; }
-
-/* 카드 하단 최근 글 정보 */
 .recent-list { list-style: none; border-top: 1px solid var(--border); padding-top: 20px; }
 .recent-list li {
     font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-/* --- [목록] 세로형 스타일 --- */
+/* --- [목록] 레이아웃 & 태그 --- */
 .page-title { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 15px; }
-.vertical-list { display: flex; flex-direction: column; gap: 15px; }
-.post-item {
-    background: var(--bg-card);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    transition: 0.2s;
-    cursor: pointer;
+.category-layout { display: flex; gap: 40px; align-items: flex-start; }
+.tag-sidebar { width: 180px; flex-shrink: 0; position: sticky; top: 100px; }
+.post-list-area { flex-grow: 1; }
+
+.tag-btn {
+    display: block; width: 100%; padding: 8px 12px; margin-bottom: 8px; border-radius: 8px;
+    background: transparent; color: var(--text-muted); border: 1px solid transparent;
+    transition: 0.2s; cursor: pointer; text-align: left;
 }
-.post-item:hover { border-color: var(--accent); }
+.tag-btn:hover { background: var(--bg-card); }
+.tag-btn.active { background: var(--bg-card); border-color: var(--accent); color: var(--accent); font-weight: bold; }
+
+.post-item {
+    background: var(--bg-card); padding: 20px; border-radius: 10px; border: 1px solid var(--border);
+    transition: 0.2s; cursor: pointer; margin-bottom: 15px;
+}
+.post-item:hover { border-color: var(--accent); transform: translateX(5px); }
 .post-item h3 { margin-bottom: 5px; }
-.post-item p { color: var(--text-muted); font-size: 0.9rem; }
+.post-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
+
+.inline-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 5px; }
+.inline-tag { font-size: 0.75rem; background: #222; border: 1px solid #444; padding: 2px 8px; border-radius: 12px; color: var(--accent); }
 
 /* --- [본문] 마크다운 스타일 --- */
 .markdown-body { padding: 20px 0; }
-.markdown-body h1 { font-size: 2.2rem; margin-bottom: 20px; color: var(--accent); }
+.markdown-body h1 { font-size: 2.2rem; margin-bottom: 10px; color: var(--accent); }
+.post-meta-tags { margin-bottom: 30px; display: flex; gap: 8px; }
 .markdown-body h2 { margin: 30px 0 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
 .markdown-body pre { background: #282c34; padding: 15px; border-radius: 10px; overflow-x: auto; margin: 20px 0; border: 1px solid #000; }
 .markdown-body code { font-family: 'Fira Code', monospace; font-size: 0.9rem; }
+.markdown-body img { max-width: 100%; height: auto; display: block; margin: 30px auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 
-/* --- 마크다운 본문 내 이미지 스타일 --- */
-.markdown-body img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* --- [공통] 하단 카테고리 목록 --- */
+.bottom-categories { margin-top: 80px; padding-top: 40px; border-top: 1px dashed var(--border); }
+.bottom-categories h3 { text-align: center; margin-bottom: 20px; color: var(--text-muted); font-size: 1.1rem; }
+.bottom-cat-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.bottom-cat-item {
+    background: var(--bg-card); border: 1px solid var(--border); padding: 8px 16px;
+    border-radius: 20px; font-size: 0.9rem; transition: 0.2s;
+}
+.bottom-cat-item:hover { border-color: var(--accent); color: var(--accent); }
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .category-layout { flex-direction: column; gap: 20px; }
+    .tag-sidebar { width: 100%; position: static; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-btn { width: auto; margin-bottom: 0; }
 }

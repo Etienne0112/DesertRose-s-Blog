@@ -43,6 +43,9 @@ const posts = [
     { id: 30001, category: 'CS', date: '2026-05-13', title: '메모리 정렬이란?',
         summary: '왜 같은 구조체인데 메모리 크기가 다를까?', fileName: 'CSStructSize.md', tags: ['Computer Science', '최적화'] },
     
+    { id: 30002, category: 'CS', date: '2026-05-16', title: '빅엔디안과 리틀엔디안이란 무엇인가?',
+        summary: '왜 바이트 저장 순서를 반대로 둘까?', fileName: 'CSSBigLittleEndian.md', tags: ['Computer Science'] },
+    
     //UE
     //DX11
     //DX12

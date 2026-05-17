@@ -55,6 +55,11 @@ const posts = [
     //AI
     //GAME
     //NTT
+    { id: 150001, category: 'NTT', date: '2026-05-16', title: 'Nand2Tetris 1장',
+        summary: 'Nand2Teris 1장 코드', fileName: 'NTT1Answer.md', tags: ['Nand2Tetris'] },
+    
+    { id: 150002, category: 'NTT', date: '2026-05-17', title: 'Nand2Tetris 2장',
+        summary: 'Nand2Teris 2장 코드', fileName: 'NTT2Answer.md', tags: ['Nand2Tetris'] },
     //NET
     //OS
     //OTHER

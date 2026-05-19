@@ -60,6 +60,9 @@ const posts = [
     
     { id: 150002, category: 'NTT', date: '2026-05-17', title: 'Nand2Tetris 2장',
         summary: 'Nand2Teris 2장 코드', fileName: 'NTT2Answer.md', tags: ['Nand2Tetris'] },
+
+    { id: 150003, category: 'NTT', date: '2026-05-17', title: 'Nand2Tetris 3장',
+        summary: 'Nand2Teris 3장 코드', fileName: 'NTT3Answer.md', tags: ['Nand2Tetris'] },
     //NET
     //OS
     //OTHER
